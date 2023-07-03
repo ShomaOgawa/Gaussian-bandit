@@ -1,12 +1,19 @@
 # Gaussian-bandit
 
+test <br>
+
+test
 
 
 
 
------　以下　参考ファイルの　README　-----
 
-# multi-armed-bandit
+# 以降は参考プログラムのREADME
+
+### 参考URL
+
+[サイト「【報酬が平均・分散が未知の正規分布に従うと仮定したThompson Sampling】〜多腕バンディット問題入門〜」](https://cafeunder.github.io/rosenblock-chainers-blog/2018/03/06/introduction-bandit.html)<br><br>
+[github　「multi-armed-bandit」](https://github.com/bakanaouji/multi-armed-bandit)<br>
 
 ## Usage
 
