@@ -13,7 +13,7 @@ $ cd src
 ```
 
 ### バンディット実験の実行
-#### ガウス事前分布を用いたトンプソンサンプリングの実行
+#### ガウス事前分布を用いた Thompson Sampling の実行
 
 ```
 $ python run_ts_gaussian.py
@@ -41,23 +41,23 @@ $ python run_hyperopt.py
 
 ```
 $ python run_ts_gaussian.py
-----------実行 Exp----------
-Exp0 を実行
-反復： 0, 選択アーム: 1, 後悔: 1.0
-反復 5000, 選択アーム: 0, 後悔: 120.0
-反復 10000、選択アーム：0、後悔：120.0
-反復： 15000、選択アーム：0、後悔：120.0
-反復：20000、選択アーム：0、後悔：120.0
-Exp0の終了
+----------Run Exp----------
+Run Exp0
+iteration: 0, selected arm:　1, regret: 1.0
+iteration: 5000, selected arm:　0, regret: 120.0
+iteration: 10000, selected arm:　0, regret: 120.0
+iteration: 15000, selected arm:　0, regret: 120.0
+iteration: 20000, selected arm:　0, regret: 120.0
+Finish Exp0
 ```
 
 実験の設定を変更するにはいくつかのオプションがある。
 
-* exp_num： 実験の実行回数。デフォルトは1。
-* not_run_exp： 実験を実行するかどうか。デフォルトはFalse。
+* exp_num： 実験の実行回数。デフォルトは 1。
+* not_run_exp： 実験を実行するかどうか。デフォルトは False。
 * save_log： 出力をcsvファイルに保存するかどうか。デフォルトは False。
-* show_log： matplotlib.pyplot を使って出力をグラフ化するかどうか。デフォルトは False です。
-* summary_log： 出力の平均値を計算して csv ファイルに保存するかどうか。
+* show_log： matplotlib.pyplot を使って出力をグラフ化するかどうか。デフォルトは False。
+* summarize_log： 出力の平均値を計算して csv ファイルに保存するかどうか。
 
 オプションは以下のように使用できます。
 
