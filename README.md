@@ -108,7 +108,7 @@ $ python plot_each_data.py
 
 * y_min: y 軸の最小値。
 * y_max: y 軸の最大値： y_max: y 軸の最大値。
-* folder_name: 実験の出力が保存されるフォルダの名前 (フォルダ名: `<アーム名>/<アルゴリズム名>`)。
+* folder_name: 実験の出力が保存されるフォルダの名前 (フォルダ名: `<Arm Name>/<Algorithm Name>`)。
 * file_name: プロットするcsvファイル名。
 
 #### 指定したフォルダにある全ての実験結果の要約データをプロットする。
@@ -126,8 +126,8 @@ $ python plot_summarized_data.py
 
 ### データの保存場所
 
-データは全て data フォルダに保存される。<br>
-data フォルダがない場合は、src フォルダと同じ階層に作成される。 
+データは全て `data` に保存される。<br>
+data フォルダがない場合は、`src` と同じ階層に作成される。 
 
 <br><br>
 ## JSAI2023 にて口頭発表
