@@ -4,7 +4,7 @@
 
 本プログラムは、Gaussian 分布(正規分布)からなる報酬を用いた多腕バンディット問題に RS を適用したものである。　
 
-## 使用方法
+## Usage
 
 すべてのpythonファイルを実行するには、`src`フォルダに移動してください。
 
@@ -12,26 +12,35 @@
 $ cd src
 ```
 
-### バンディット実験の実行
-#### ガウス事前分布を用いた Thompson Sampling の実行
+### Run Bandit problem Experiment
+
+#### run Thompson Sampling using Gaussian Prior
+#### run Thompson Sampling using Gaussian Prior
+
+
+#### run Thompson Sampling using Gaussian Prior
+
+報酬が平均が未知、分散が1の正規分布に従うと仮定した TS アルゴリズムの実行
 
 ```
 $ python run_ts_gaussian.py
 ```
 
-#### ガウス尺度逆カイ二乗事前分布を用いたトンプソンサンプリングの実行
+#### run Thompson Sampling using Gaussian Scaled Inverse Chi-Squared Prior
+
+報酬が平均が未知、分散が未知の正規分布に従うと仮定した TS アルゴリズムの実行
 
 ```
 $ python run_ts_gaussian_sicq.py
 ```
 
-#### UCB1 の実行
+#### run UCB1
 
 ```
 $ python run_ucb1.py
 ```
 
-#### ハイパーオプトの実行
+#### run Hyperopt
 
 ```
 $ python run_hyperopt.py
