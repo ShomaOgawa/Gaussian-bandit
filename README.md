@@ -124,6 +124,10 @@ $ python plot_summarized_data.py
 * folder_name: 実験の出力を保存するフォルダの名前（フォルダ名：`<Arm Name>`）。
 * file_name: プロットするcsvファイルの名前。
 
+### データの保存場所
+
+データは全て data フォルダに保存される。<br>
+data フォルダがない場合は、src フォルダと同じ階層に作成される。 
 
 <br><br>
 ## JSAI2023 にて口頭発表
