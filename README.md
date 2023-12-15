@@ -1,13 +1,13 @@
 # Gaussian-bandit
 
-バンディット問題の中で連続値を取る複数の報酬源を比較するには報酬分布の形状を少ないサンプル数から評価していく必要がある。一般的には分散の直接推定を含んだ選択アルゴリズムが優れているのだが、人間のリスク判断に習ったアルゴリズムの RS では平均のみで分散推定せずに優れた成績が得られた。
+バンディット問題の中で連続値を取る複数の報酬源を比較するには報酬分布の形状を少ないサンプル数から評価していく必要があります。一般的には分散の直接推定を含んだ選択アルゴリズムが優れていますが、人間のリスク判断に習ったアルゴリズムの RS では平均のみで分散推定せずに優れた成績が得られました。
 
-本プログラムは、Gaussian 分布(正規分布)からなる報酬を用いた多腕バンディット問題に RS を適用したものである。　
+本プログラムは、Gaussian 分布(正規分布)からなる報酬を用いた多腕バンディット問題に RS を適用したものです
 <br>
 
 ## Usage
 
-すべてのpythonファイルを実行するには、`src`フォルダに移動してください。
+すべてのpythonファイルを実行するには、`src`フォルダに移動してください
 
 ```
 $ cd src
@@ -18,7 +18,7 @@ $ cd src
 
 #### run RS-opt
 
-RS-opt アルゴリズム（希求水準を最適値に設定）の実行
+RS-opt アルゴリズム（希求水準を最適値に設定）を実行する
 
 ```
 $ python run_rs_opt.py
@@ -26,7 +26,7 @@ $ python run_rs_opt.py
 
 #### run RS-dyn
 
-RS-dyn アルゴリズム（希求水準を動的に設定）の実行
+RS-dyn アルゴリズム（希求水準を動的に設定）を実行する
 
 ```
 $ python run_rs_dyn.py
@@ -34,7 +34,7 @@ $ python run_rs_dyn.py
 
 #### run Thompson Sampling using Gaussian Prior
 
-報酬が平均が未知、分散が1の正規分布に従うと仮定した TS アルゴリズムの実行
+報酬が平均が未知、分散が1の正規分布に従うと仮定した TS アルゴリズムを実行する
 
 ```
 $ python run_ts_gaussian.py
@@ -42,7 +42,7 @@ $ python run_ts_gaussian.py
 
 #### run Thompson Sampling using Gaussian Scaled Inverse Chi-Squared Prior
 
-報酬が平均が未知、分散が未知の正規分布に従うと仮定した TS アルゴリズムの実行
+報酬が平均が未知、分散が未知の正規分布に従うと仮定した TS アルゴリズムを実行する
 
 ```
 $ python run_ts_gaussian_sicq.py
@@ -60,7 +60,7 @@ $ python run_ucb1.py
 $ python run_hyperopt.py
 ```
 
-出力例は次のとおりです。
+出力例は次のとおりです
 
 ```
 $ python run_rs_opt.py
@@ -78,17 +78,17 @@ Finish Exp0
 ```
 <br>
 
-実験の設定を変更するにはいくつかのオプションがあります。
+実験の設定を変更するにはいくつかのオプションがあります
 
-* exp_num： シミュレーションの実行回数。　デフォルトは 1。
-* not_run_exp： 実験を実行するかどうか。　デフォルトは False。
-* save_log： 出力をcsvファイルに保存するかどうか。　デフォルトは False。
-* show_log： matplotlib.pyplot を使って出力をグラフ化するかどうか。　デフォルトは False。
-* summarize_log： 出力の平均値を計算して csv ファイルに保存するかどうか。
+* exp_num： シミュレーションの実行回数。　デフォルトは 1
+* not_run_exp： 実験を実行するかどうか。　デフォルトは False
+* save_log： 出力をcsvファイルに保存するかどうか。　デフォルトは False
+* show_log： matplotlib.pyplot を使って出力をグラフ化するかどうか。　デフォルトは False
+* summarize_log： 出力の平均値を計算して csv ファイルに保存するかどうか
   
 <br>
 
-オプションは以下のように使用できます。
+オプションは以下のように使用できます
 
 ```
 $ python run_rs_opt.py --exp_num=100 --save_log --summarize_log
@@ -104,35 +104,35 @@ $ python run_rs_opt.py --exp_num=100 --save_log --summarize_log
 $ python plot_each_data.py
 ```
 
-プロットの設定を変更するオプションがいくつかある。
+プロットの設定を変更するオプションがいくつかあります
 
-* y_min: y 軸の最小値。
-* y_max: y 軸の最大値： y_max: y 軸の最大値。
-* folder_name: 実験の出力が保存されるフォルダの名前 (フォルダ名: `<Arm Name>/<Algorithm Name>`)。
-* file_name: プロットするcsvファイル名。
+* y_min: y 軸の最小値
+* y_max: y 軸の最大値： y_max: y 軸の最大値
+* folder_name: 実験の出力が保存されるフォルダの名前 (フォルダ名: `<Arm Name>/<Algorithm Name>`)
+* file_name: プロットするcsvファイル名
 
-#### 指定したフォルダにある全ての実験結果の要約データをプロットする。
+#### 指定したフォルダにある全ての実験結果の要約データをプロットする
 
 ```
 $ python plot_summarized_data.py
 ```
 
-プロットの設定を変更するオプションがいくつかあります。
+プロットの設定を変更するオプションがいくつかあります
 
 * y_min: y 軸の最小値。
-* y_max: y 軸の最大値： y_max: y 軸の最大値。
-* folder_name: 実験の出力を保存するフォルダの名前（フォルダ名：`<Arm Name>`）。
-* file_name: プロットするcsvファイルの名前。
+* y_max: y 軸の最大値： y_max: y 軸の最大値
+* folder_name: 実験の出力を保存するフォルダの名前（フォルダ名：`<Arm Name>`）
+* file_name: プロットするcsvファイルの名前
 
 ### データの保存場所
 
-データは全て `data` に保存される。<br>
-data フォルダがない場合は、`src` と同じ階層に作成される。 
+データは全て `data` に保存される<br>
+data フォルダがない場合は、`src` と同じ階層に作成される 
 
 <br><br>
 ## JSAI2023 にて口頭発表
 
-[発表論文](https://drive.google.com/file/d/1v3ExVtRfidsZ-ITpQux5O9aSbvl38vgF/view?usp=drive_link)
+[発表論文](https://www.jstage.jst.go.jp/article/pjsai/JSAI2023/0/JSAI2023_2Q4OS27b04/_article/-char/ja/)
 
 
 <br><br>
